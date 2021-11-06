@@ -1,0 +1,45 @@
+nav.navbar.navbar-expand-lg.navbar-light
+    .container-fluid
+        a.navbar-brand(href='/') Online shop
+        button.navbar-toggler(type='button' data-bs-toggle='collapse' data-bs-target='#navbarSupportedContent' aria-controls='navbarSupportedContent' aria-expanded='false' aria-label='Toggle navigation')
+        #navbarSupportedContent.collapse.navbar-collapse
+            ul.navbar-nav.me-auto.mb-2.mb-lg-0
+                li.nav-item
+                    a.nav-link.active(aria-current='page' href='/') Home
+                if user
+                    li.nav-item
+                        a.nav-link.btn.btn-info(href='/add') E'lon berish
+            form.d-flex.add(action="/search")
+                input.form-control.me-2.none(type='text' name="search" placeholder='Search' aria-label='Search')
+                input(type="submit" value="Yuborish" name="submit").btn.btn-outline-info
+            .container.col-lg-3
+                .valute
+                    if kurs
+                        each dol in kurs
+                            if(dol.Ccy == "USD")
+                                .kurs
+                                    .dolCode
+                                        .code 
+                                            h5= dol.CcyNm_UZ
+                                            p= dol.Rate
+                    else
+                        each dol in kurs ? val : []
+                            if(dol.Ccy == "USD")
+                                .kurs
+                                    .dolCode
+                                        .code
+                                            h5= dol.CcyNm_UZ
+                                            p= dol.Code
+            .signIn
+                if !user
+                      button.btn.btn-outline-info
+                        a(href="#").nav-link.proSignIn 
+                            i.fal.fa-user
+                            | Sign In
+                        span | 
+                        a(href="#").nav-link.proSign 
+                            i.fal.fa-user-plus
+                            | Sign Up
+                else 
+                    .logout.btn.btn-danger
+                        a.nav-link(href="/account/logout") Logout

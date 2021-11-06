@@ -1,0 +1,891 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Lato', sans-serif;
+    text-decoration: none;
+}
+
+html {
+    overflow-x: hidden;
+}
+
+html.active {
+    overflow: hidden;
+}
+
+html::-webkit-scrollbar {
+    width: 8px;
+    height: 10px;
+}
+
+html::-webkit-scrollbar-track {
+    background: black;
+    width: 8px;
+}
+
+html::-webkit-scrollbar-thumb {
+    background: white;
+    border-radius: 50px;
+}
+
+.container {
+    padding-top: 35px;
+}
+
+.navbar {
+    background: linear-gradient(to left, #000000, #434343) !important;
+    padding: 25px 0px;
+}
+
+a.navbar-brand {
+    color: white !important;
+}
+
+a.nav-link {
+    color: white !important;
+}
+
+.none {
+    background: transparent !important;
+    color: white !important;
+}
+
+.card_product {
+    border: 3px double rgba(51, 51, 51, 0.322);
+    border-radius: 7px;
+    width: 300px;
+    position: relative;
+    padding: 18.75px;
+    box-shadow: 0 0 10px 0 rgba(51, 51, 51, 0.322),
+        inset 0 0 10px 0 rgba(51, 51, 51, 0.322),
+        0 0 8px 0 rgba(51, 51, 51, 0.322);
+    transition: all 0.2s linear;
+    margin: 10px auto;
+}
+
+.card_product:hover {
+    box-shadow: 0 0 3px 0 rgba(51, 51, 51, 0.322),
+        inset 0 0 5px 0 rgba(51, 51, 51, 0.322);
+}
+
+.card_img {
+    width: 100%;
+    max-width: 100%;
+}
+
+.col-3 .card_img img {
+    width: 100%;
+    max-width: 100%;
+    height: 200px;
+}
+
+.cardImg {
+    overflow: hidden;
+}
+
+.card_img img:hover {
+    transform: scale(1.2) !important;
+}
+
+
+.cardImg .imgZoom:hover {
+    transform: scale(1.2) !important;
+}
+
+.card_text {
+    border: 2px double rgba(0, 0, 0, 0.425);
+    padding: 4.5px 5px;
+    max-width: 100%;
+    width: 100%;
+    border-radius: 7px;
+    margin: 10px auto;
+}
+
+.card_img img {
+    max-width: 100%;
+    width: 100%;
+}
+
+.col-3 .card_text h2 {
+    color: gray;
+    margin: 10px 0;
+    text-transform: capitalize;
+    font-size: 23px;
+}
+
+.card_text .price {
+    color: gray;
+}
+
+.card_text .card_bottom {
+    width: 100%;
+    max-width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card_bottom .like {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.col-8 .card_bottom .like {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+
+.col-8 .card_bottom .far.active {
+    display: none;
+}
+
+.col-8 .card_bottom .far.active .fas {
+    display: block;
+}
+
+.col-8 .card_bottom .fas.active {
+    display: block;
+}
+
+.col-8 .card_bottom .like .fas {
+    display: none;
+}
+
+.col-8 .card_bottom .like small {
+    margin-left: 10px;
+    font-size: 18px;
+}
+
+
+.card_bottom .flex {
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card_bottom .flex span:nth-child(1) {
+    text-transform: capitalize;
+}
+
+.form-select {
+    margin-bottom: 20px;
+}
+
+footer {
+    background: #000;
+    max-width: 100%;
+    width: 100%;
+    height: 500px;
+    color: gray;
+    margin-top: 50px;
+}
+
+footer .nav-link {
+    font-size: 22px;
+}
+
+footer .nav-link:hover {
+    color: white !important;
+}
+
+footer .nav-link {
+    color: rgb(182, 174, 174) !important;
+}
+
+.footer-logo {
+    margin-left: 40px;
+    max-width: 100%;
+    width: 390px;
+}
+
+.footer-img {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.foot {
+    margin-right: 15px;
+}
+
+.footer-icons {
+    color: white;
+    margin-top: 25px;
+    max-width: 100%;
+    width: 390px;
+}
+
+.footer-icons i {
+    font-size: 25px;
+    margin: 10px;
+    background: rgb(53, 50, 50);
+    padding: 15px;
+    border-radius: 50px;
+    transition: all 0.3s linear;
+}
+
+.footer-icons i:hover {
+    transform: rotate(360deg);
+}
+
+footer .fab.fa-facebook-f {
+    padding: 15px 21px;
+}
+
+footer .fab.fa-instagram {
+    padding: 15px 17px;
+}
+
+.footer-icons i:nth-child(1):hover {
+    background: rgb(7, 62, 180);
+}
+
+.footer-icons i:nth-child(2):hover {
+    background: #DD2A7B;
+}
+
+.footer-icons i:nth-child(3):hover {
+    background: #515BD4;
+}
+
+.footer-icons i:nth-child(4):hover {
+    background: #0088cc;
+}
+
+.footer-icons i:nth-child(5):hover {
+    background: #FF0000;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer-bottom {
+    background: rgb(29, 26, 26);
+    max-width: 100%;
+    width: 100%;
+    height: 70px;
+    color: rgb(182, 174, 174);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.sale {
+    width: 50px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 50px;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 7px;
+    right: 5px;
+    background: red;
+}
+
+.foot-phone {
+    text-align: right;
+}
+
+.foot-phone span {
+    font-size: 35px;
+    transition: all 0.3s linear;
+}
+
+.foot-phone span:hover {
+    color: white;
+}
+
+.fixed {
+    position: fixed;
+    background: red;
+    bottom: 30px;
+    right: 25px;
+    color: white;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    font-size: 22px;
+}
+
+.fixed b {
+    position: absolute;
+    top: 2px;
+    right: 9px;
+}
+
+.fixed i {
+    animation: bell 1s infinite ease;
+}
+
+@keyframes bell {
+
+    0%,
+    100% {
+        transform: rotate(-45deg);
+    }
+
+    50% {
+        transform: rotate(45deg);
+    }
+}
+
+.top {
+    background: red;
+    color: white;
+    position: fixed;
+    bottom: 30px;
+    left: 25px;
+    width: 60px;
+    height: 60px;
+    border-radius: 50px;
+    overflow: hidden;
+}
+
+.top span {
+    display: block;
+    width: 20px;
+    height: 1px;
+    background: white;
+    color: white;
+    content: '';
+    position: absolute;
+}
+
+.top span:nth-child(1) {
+    transform: translate(12px, 18px) rotateZ(-40deg);
+    animation-delay: 1s;
+}
+
+.top span:nth-child(2) {
+    transform: translate(28px, 18px) rotateZ(40deg);
+    animation-delay: 1s;
+}
+
+.top span {
+    animation: next 1.5s infinite ease;
+}
+
+.top .first {
+    transform: translate(0, 0);
+}
+
+.top .second {
+    transform: translate(0, 10px);
+}
+
+.top .third {
+    transform: translate(0, 20px);
+}
+
+.top .animate {
+    /* transform: translate(0, 0); */
+    animation: to-top 1s infinite linear;
+    position: absolute;
+    top: -40px;
+}
+
+@keyframes to-top {
+
+    0%,
+    50% {
+        transform: translate(0, 40px);
+    }
+
+    100% {
+        transform: translate(0, -60px);
+    }
+}
+
+form.add {
+    /* margin-right: 20%; */
+    display: block;
+}
+
+form.add .form-control {
+    width: 700px !important;
+    border-color: #0dcaf0;
+}
+
+/* .signIn {
+    position: fixed;
+    bottom: 100px;
+    right: 25px;
+} */
+
+.signIn {
+    padding-right: 25px;
+}
+
+.signIn button {
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+.signIn button:hover {
+    color: #000;
+}
+
+.signIn button a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+}
+
+.signIn button a i {
+    margin-right: 8px;
+}
+
+.signIn button:hover a {
+    color: #000 !important;
+}
+
+.register {
+    position: fixed;
+    top: 0;
+    z-index: 150;
+    background-color: white;
+    width: 550px;
+    max-width: 100%;
+    height: 100%;
+    padding: 40px 25px 30px 25px;
+    position: absolute;
+    right: -100%;
+    transition: all .4s linear;
+}
+
+#signInHome.active {
+    right: 0;
+}
+
+.body-overlay {
+    max-width: 100%;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.315);
+    z-index: 140;
+    position: fixed;
+    top: 0;
+    display: none;
+}
+
+.body-overlay.active {
+    display: block;
+}
+
+.register.active {
+    transition: all .4s linear;
+    right: 0;
+}
+
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.heading i {
+    font-size: 27px;
+}
+
+/* ============ card.pug CSS ============ */
+
+.col-8 {
+    position: relative;
+    width: 100%;
+}
+
+.col-8 img {
+    border-radius: 6px;
+}
+
+.col-8 .card_products {
+    padding: 15px 10px;
+}
+
+.col-8 .card_text {
+    border: none;
+}
+
+.col-8 .text-flex.block {
+    margin-bottom: 20px;
+    align-items: center;
+}
+
+.col-8 .text-flex.block h3 {
+    text-transform: capitalize;
+    margin-left: 15px;
+}
+
+.col-8 .text-flex {
+    display: flex;
+    align-items: center;
+}
+
+.col-8 .card_img1 {
+    display: flex;
+    align-items: center;
+    width: 1005;
+    max-width: 100%;
+    margin-top: 140px;
+}
+
+.col-8 .card_img1 img {
+    width: 650px;
+    max-width: 100%;
+}
+
+.col-8 .fox {
+    margin-right: 30px;
+}
+
+.col-8 .card_text h3 {
+    color: #212729;
+}
+
+.card_text .price {
+    color: red;
+    text-decoration: line-through;
+}
+
+.col-8 .card_text .price {
+    text-decoration: none;
+}
+
+.card_text p {
+    width: 650px;
+    line-height: 2;
+    font-size: 18px;
+}
+
+.row.card1 {
+    width: 1300px;
+}
+
+.col-8 .card_bottom {
+    margin-bottom: 15px;
+}
+
+.col-8 .card-client a {
+    margin: 5px 10px;
+}
+
+/* ============ card.pug CSS ============ */
+
+/* =============== dollor valute =============== */
+
+.valute {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.valute .kurs {
+    margin: 5px;
+    color: white;
+}
+
+.kurs .dolCode {
+    border: 1px solid #0dcaf0;
+    padding: 10px;
+}
+
+.kurs .dolCode .country,
+.kurs .dolCode .code {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.kurs .dolCode .country h5,
+.kurs .dolCode .code h5 {
+    margin-right: 15px;
+    margin-bottom: 0;
+}
+
+.kurs .dolCode .country p,
+.kurs .dolCode .code p {
+    margin: 0;
+}
+
+#navbarSupportedContent {
+    align-items: center;
+    justify-content: center;
+}
+
+.container.col-lg-3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+
+.message {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    background: white;
+    height: 100%;
+    width: 550px;
+    max-width: 100%;
+    box-shadow: 0 0 15px rgba(128, 128, 128, 0.507),
+        0 0 15px rgba(128, 128, 128, 0.507);
+    transition: all 0.3s linear;
+}
+
+.message.active {
+    transition: all 0.3s linear;
+    right: 0;
+}
+
+.message .msgBar {
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid rgba(128, 128, 128, 0.507);
+    padding: 22px;
+    box-shadow: 0 0 5px rgba(128, 128, 128, 0.507),
+        0 0 7px rgba(128, 128, 128, 0.507);
+}
+
+.message .msgBar .d-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.message .msgIcon {
+    position: absolute;
+    top: 30px;
+    right: 35px;
+    cursor: pointer;
+}
+
+.message .msgIcon:hover i {
+    color: #000;
+}
+
+.message .msgIcon i {
+    font-size: 28px;
+    color: rgba(128, 128, 128, 0.507);
+}
+
+.message .msgBar .d-flex h4 {
+    width: 360px;
+    color: rgba(128, 128, 128, 0.507);
+    font-size: 21px;
+}
+
+.message .msgBar img {
+    max-width: 100%;
+    width: 60px;
+    height: 60px;
+    margin: 0 15px 15px 0;
+}
+
+.middleMsg {
+    padding: 28px;
+}
+
+.middleMsg img {
+    width: 100%;
+    margin: 18px 0;
+    border-radius: 5px;
+}
+
+.middleMsg .userMsg {
+    background: #e8e8e8;
+    padding: 15px;
+    border-radius: 5px;
+    position: relative;
+}
+
+.middleMsg .userMsg span {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: -19px;
+    width: 0;
+    height: 0;
+    border-bottom: 20px solid transparent;
+    border-left: 20px solid transparent;
+    border-bottom-color: #e8e8e8;
+}
+
+.middleMsg .userMsg>* {
+    font-size: 24px;
+}
+
+.middleMsg .sms {
+    text-align: right;
+    margin-top: 15px;
+}
+
+.middleMsg .sms a {
+    border: 2px solid red;
+    padding: 15px 10px;
+    position: relative;
+    text-decoration: none;
+    color: #212529;
+    font-size: 18px;
+}
+
+.middleMsg .sms a i {
+    margin-right: 15px;
+}
+
+
+.middleMsg .sms a span {
+    position: absolute;
+    bottom: -3px;
+    right: -15px;
+    display: block;
+    width: 0;
+    height: 0;
+    border-bottom: 10px solid transparent;
+    border-right: 15px solid transparent;
+    border-bottom-color: red;
+}
+
+/* =============== dollor valute =============== */
+
+/* =============== Author information =============== */
+
+.col-8 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.authorHead {
+    margin-bottom: 15px;
+    font-weight: 700;
+}
+
+.d-block img {
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+}
+
+.d-block h5 {
+    text-transform: capitalize;
+}
+
+.other_products img {
+    width: 250px;
+    height: 200px;
+}
+
+.other_products h5 {
+    text-transform: capitalize;
+}
+
+.other_products .card_img {
+    overflow: hidden;
+}
+
+.other_products .card_text a {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.other_products .card_text a i {
+    margin-left: 7px;
+}
+
+/* =============== Author information =============== */
+
+/* =============== Owl-carousel styles =============== */
+
+.owl-carousel {
+    position: relative;
+}
+
+.owl-nav.disabled,
+.owl-nav {
+    display: flex !important;
+    justify-content: space-between;
+}
+
+.owl-nav .owl-next span,
+.owl-nav .owl-prev span {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: red;
+    border-radius: 50px;
+    opacity: 0.7;
+    color: white;
+}
+
+.owl-nav .owl-next span:hover,
+.owl-nav .owl-prev span:hover {
+    opacity: 1;
+}
+
+.owl-nav .owl-next {
+    top: 65px;
+    position: absolute;
+    right: -10px;
+}
+
+.owl-nav .owl-prev {
+    top: 65px;
+    position: absolute;
+    left: -10px;
+}
+
+/* =============== Owl-carousel styles =============== */
+
+.homeMsg {
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 25;
+}
+
+.homeMsg>* {
+    padding: 150px;
+    height: 100px;
+}
+
+.alert.alert-success {
+    padding: 50px 40px;
+    text-align: center;
+}
+
+.homeMsg {
+    display: block;
+}
+
+.homeMsg.active {
+    display: none;
+}

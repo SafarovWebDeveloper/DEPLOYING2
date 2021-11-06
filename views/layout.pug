@@ -1,0 +1,115 @@
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(http-equiv="X-UA-Compatible" content="IE=edge")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
+        //- custom bootstrap css 5 link
+        link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC' crossorigin='anonymous')
+        link(rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css' integrity='sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==' crossorigin='anonymous' referrerpolicy='no-referrer')
+        //- owl-carousel css links
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" integrity="sha512-tS3S5qG0BlhnQROyJXvNjeEM4UpMXHrQfTGmbQ1gKmelCxlSEBUaxhRBj/EFTzpbP4RVSrpEikbmdJobCvhE3g==" crossorigin="anonymous" referrerpolicy="no-referrer")
+        //- custom font awesome icons link
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+        //- custom app.css link    
+        link(rel="stylesheet" href="/css/style.css")
+        title= title
+    body 
+        include navbar
+        .container
+            .homeMsg
+                != messages('messages', locals)
+                if errors
+                    each error in errors 
+                        div(class="alert alert-danger") #{error.msg}
+            h1= page
+            block home
+            block add
+        include footer
+        .fixed 
+            i.far.fa-bell#sms
+            //- audio#my-song
+            //-     source(src="/img/music.mp3" type="audio/mp3") 
+        .message 
+            .msgBar 
+                img(src="/img/mens.jpg" alt="user")
+                .d-flex
+                    h4 Online shop. O'zbekiston bo'yicha eng tez yetkazib berish xizmati.
+                        i.fal.fa-phone-alt +998 99 266 84 79 
+                    h5 bot
+                .msgIcon 
+                    i.fal.fa-close#closeMsg
+            .middleMsg 
+                .userMsg 
+                    small online shop 21 окт. 2021 г. 11:21
+                    h3 Assalomu aleykum! Sizga qanday yordam bera olamiz ? Agar Sizni qiziqtirgan savol ushbu chatda bo'lsa uni ustiga bosing!
+
+                    h3 Здраствуйте! Давайте мы Вам поможем? Если интересующейся Ваш вопрос имеется на нашем чате, на него! 
+                    span
+                img(src="/img/logo.png" alt="onlineLogo")
+                .sms 
+                    .hrefSms 
+                        a(href="#") 
+                            i.fal.fa-shopping-cart 
+                            b Qanday xarid qilinadi?
+                            span  
+        .top 
+            .animate
+                .first 
+                    span 
+                    span 
+                .second 
+                    span 
+                    span 
+                .third
+                    span 
+                    span 
+        .singUp 
+            form(action="/signUp" method="POST" enctype="multipart/form-data").register
+                .heading 
+                    h2 Ro'yhatdan O'tish
+                    i.far.fa-times-circle
+                .mb-3
+                    label.form-label(for='') Name
+                    input#exampleInputPassword1.form-control(type='text' name="name" placeholder="ism kiriting")
+                .mb-3
+                    label.form-label(for='') Username
+                    input#exampleInputPassword1.form-control(type='text' name="username" placeholder="username kiriting")
+                .mb-3
+                    label.form-label(for='') Email address
+                    input#exampleInputPassword1.form-control(type='text' name="emailUp" placeholder="email kiriting")
+                .mb-3
+                    label.form-label(for='') Password
+                    input#exampleInputPassword1.form-control(type='password' name="password" placeholder="parol kiriting")
+                .mb-3
+                    label.form-label(for='') Conform Password
+                    input#exampleInputPassword1.form-control(type='password' name="password2" placeholder="parol takrorlang")
+                .mb-3
+                    label.form-label(for='exampleInputPassword1') Avatar
+                    input#exampleInputPassword1.form-control(type='file' name="avatar")
+                .mb-3.form-check
+                    input#exampleCheck1.form-check-input(type='checkbox')
+                    label.form-check-label(for='exampleCheck1') Check me out
+                button.btn.btn-primary(type='submit') Submit
+        .signInHome
+            form(method="POST" action="/login/log").register#signInHome
+                .heading 
+                    h2 Kirish
+                .mb-3
+                    label.form-label(for='') User Name
+                    input#exampleInputEmail1.form-control(type='text' placeholder="Maxsulot nomi" name="username")
+                .mb-3
+                    label.form-label(for="") Password
+                    input#exampleInputPassword1.form-control(type='text' placeholder="Maxsulot narxi" name="password")
+                button.btn.btn-danger(type='submit') Submit
+        span.body-overlay
+        //- jQuery custom js
+        script(src="/js/jQuery.js")
+        //- custom bootstrap js 5 link
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js' integrity='sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM' crossorigin='anonymous')
+        //- jQuery custom js
+        script(src='https://code.jquery.com/jquery-3.6.0.js' integrity='sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=' crossorigin='anonymous')
+        //- owl-carousel custom js
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js" integrity="sha512-bPs7Ae6pVvhOSiIcyUClR7/q2OAsRiovw4vAkX+zJbw3ShAeeqezq50RIIcIURq7Oa20rW2n2q+fyXBNcU9lrw==" crossorigin="anonymous" referrerpolicy="no-referrer")
+        //- layout custom js 
+        script(src="/js/layout.js") 

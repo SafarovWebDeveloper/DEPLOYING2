@@ -1,0 +1,23 @@
+extends layout 
+block home
+    .row 
+        each db in datas
+            .col-3
+                .card_product
+                    .card_img(userId = "/product/" + db.id)
+                        .cardImg 
+                            img(src=""+db.photo alt="rasm")
+                        span.sale= db.sale
+                    .card_text
+                        h2= db.title
+                        p.price= db.price
+                            |   sum
+                        p.sale_price= db.price - (db.price * db.sale / 100)
+                            |   sum
+                        .card_bottom 
+                            span.like(userId  = "/" + db.id) 
+                                i.far.fa-heart
+                                small.write_like= db.like 
+                            .flex
+                                span  date  
+                                span.date= db.date.toDateString()

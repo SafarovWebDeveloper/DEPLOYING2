@@ -1,0 +1,75 @@
+extends layout 
+block home
+    .row.card1
+        .col-8
+            .card_products(userId = "/" + datas.id)
+                .d-flex
+                    .fox
+                        .text-flex.block 
+                            h2 Nomi:
+                            h3= datas.title
+                        .card_img1 
+                            .cardImg#img-container
+                                img(src="/"+datas.photo alt="rasm" id="zoom_05").imgZoom
+                            span.sale= datas.sale
+                                |%
+                    .card_text
+                        .text-flex 
+                            h2 Narxi:
+                            h3.price= datas.price - (datas.price * datas.sale / 100)
+                                |   sum
+                        h3= datas.price - Math.floor(datas.price / 6)
+                            |   sum/6 oy
+                        p.date= datas.date.toDateString()
+                        p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ipsum sunt provident natus ad repellat nam laboriosam, sapiente consequuntur. Dignissimos blanditiis culpa sequi ea reiciendis dolore quas natus, quo neque dolorem, vel earum quis omnis, fugit fugiat unde dicta magnam nostrum dolorum reprehenderit. Assumenda ipsum odio in doloribus qui reiciendis nobis distinctio suscipit voluptatibus saepe inventore minima veritatis eum molestias sequi voluptates, sit excepturi! Omnis et porro atque necessitatibus distinctio maxime illo enim reprehenderit molestias, sapiente architecto qui quasi ipsam non facilis sequi dolorem! Praesentium vero excepturi, unde, dolorem quibusdam accusantium reiciendis maxime harum quas optio velit iste, sit doloribus culpa nostrum. Ex officia voluptates repellendus ut asperiores nulla eaque consequuntur incidunt, numquam autem earum at necessitatibus, repudiandae rem eligendi neque.
+                        .card_bottom 
+                            span.like(userId  = "/" + datas.id) 
+                                i.far.fa-heart
+                                i.fas.fa-heart
+                                small.write_like= datas.like
+                            span= datas.date.toDateString()  
+                            span= datas.sale
+                                |%
+                        .card-client
+                         if user
+                          if user.id === datas.dirUser   
+                            a(href="/product/edit/" +datas.id).btn.btn-danger Update 
+                            a(href="/product/remove/" +datas.id).btn.btn-success Delete 
+        h1.authorHead Muallifning barcha e'lonlari.
+        .d-block.w-100
+            img(src="/"+prof.avatar, width="50px" alt="avatar")
+            h5= prof.name
+        .col-8.owl-carousel
+            each dat in db
+                if dat.dirUser == prof.id   
+                    if dat.id != datas.id     
+                        .other_products
+                            .card
+                                .card_img 
+                                    img(src="/"+dat.photo, alt="")
+                                .card_text
+                                    h5= dat.title
+                                    a(href="/").btn.btn-outline-info More
+                                        i.fas.fa-arrow-right
+        .owl-nav.first
+            button(type="button" role="presentation" class="owl-prev")
+                span(aria-label="Previous" class="fal fa-chevron-left")
+            button(type="button" role="presentation" class="owl-next")
+                span(aria-label="Next" class="fal fa-chevron-right")
+        h1.authorHead O'xshash maxsulotlar
+        .owl-carousel.popular.col-8
+            each cate in db
+                if cate.category == datas.category
+                    .other_products
+                        .card
+                            .card_img
+                                img(src="/"+cate.photo, alt="")
+                            .card_text
+                                h5= cate.title
+                                a(href="/").btn.btn-outline-info More
+                                    i.fas.fa-arrow-right
+        .owl-nav.navigation
+            button(type="button" role="presentation" class="owl-prev")
+                span(aria-label="Previous" class="fal fa-chevron-left")
+            button(type="button" role="presentation" class="owl-next")
+                span(aria-label="Next" class="fal fa-chevron-right")

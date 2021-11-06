@@ -1,0 +1,53 @@
+extends layout 
+block add
+    form(method="POST" enctype="multipart/form-data")
+        if datas
+            .mb-3
+                label.form-label(for='') Maxsulot nomi
+                input#exampleInputEmail1.form-control(type='text' placeholder="Maxsulot nomi" name="title" value=datas.title)
+            .mb-3
+                label.form-label(for="") Maxsulot Narxi
+                input#exampleInputPassword1.form-control(type='text' placeholder="Maxsulot narxi" name="price")
+            .mb-3
+                label.form-label(for="") Chegirma
+                input#exampleInputPassword1.form-control(type='text' placeholder="chegirma foiz" name="sale")
+            .mb-3
+                label.form-label(for="") Maxsulot Rasmi
+                input#exampleInputPassword1.form-control(type='file' name="photo")
+            select(name="category").form-select
+                option(value="avtomobil" selected) avtomobil  
+                option(value="Telefon") Telefon 
+                option(value="Kiyimlar") Kiyimlar  
+                option(value="Uylar") Uylar 
+                option(value="Uy hayvonlari") Uy hayvonlari 
+                option(value="Texnikalar") Texnikalar  
+                option(value="sport anjomlari") sport anjomlari  
+                option(value="boshqa maxsulotlar") boshqa maxsulotlar 
+            .mb-3
+                textarea(name="comments" aria-label="Username" cols="100" rows="10")  
+            button.btn.btn-danger(type='submit')= button
+        else 
+            .mb-3
+            label.form-label(for='') Maxsulot nomi
+            input#exampleInputEmail1.form-control(type='text' placeholder="Maxsulot nomi" name="title")
+        .mb-3
+            label.form-label(for="") Maxsulot Narxi
+            input#exampleInputPassword1.form-control(type='text' placeholder="Maxsulot narxi" name="price")
+        .mb-3
+            label.form-label(for="") Chegirma
+            input#exampleInputPassword1.form-control(type='text' name="sale")
+        .mb-3
+            label.form-label(for="") Maxsulot Rasmi
+            input#exampleInputPassword1.form-control(type='file' name="photo")
+        select(name="category").form-select
+            option(value="avtomobil" selected) avtomobil  
+            option(value="Telefon") Telefon 
+            option(value="Kiyimlar") Kiyimlar  
+            option(value="Uylar") Uylar 
+            option(value="Uy hayvonlari") Uy hayvonlari 
+            option(value="Texnikalar") Texnikalar  
+            option(value="sport anjomlari") sport anjomlari  
+            option(value="boshqa maxsulotlar") boshqa maxsulotlar 
+        .mb-3
+            textarea(name="comments" aria-label="Username" cols="100" rows="10")  
+        button.btn.btn-danger(type='submit')= button
